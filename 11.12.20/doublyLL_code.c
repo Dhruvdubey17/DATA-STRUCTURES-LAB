@@ -91,6 +91,7 @@ void deleteNode(node**head,int d) {
 
 	if((*head)->data == d && (*head)->next== NULL) {
 		*head = NULL;
+		printf("%d was deleted\n", d);
 		return;
 	}
 	while(temp!=NULL) {
