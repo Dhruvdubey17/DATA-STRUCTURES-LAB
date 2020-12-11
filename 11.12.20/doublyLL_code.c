@@ -68,7 +68,7 @@ void insertLeft(node**h,int d,int ele) {
 			temp->next->prev = temp;
 			head->next = temp;
 			printf("%d was inserted to the left of %d\n",d,ele);
-			break;
+			return;
 		}
 		else {
 			head = head->next;
@@ -170,3 +170,12 @@ int main() {
 		scanf("%d",&opt);
 	}
 }
+
+
+
+
+
+
+
+
+
