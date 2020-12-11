@@ -7,14 +7,6 @@ typedef struct Node{
 	struct Node*next;
 }node;
 
-int length(node*head) {
-	int count = 0;
-	while(head!=NULL) {
-		head = head->next;
-		count++;
-	}
-	return count;
-}
 void insertAtEnd(node**head,int d) {
 	node *n,*temp=*head;
 
@@ -45,6 +37,10 @@ void insertAtEnd(node**head,int d) {
 void insertLeft(node**h,int d,int ele) {
 	//check if it is the first element
 	node*head = *h;
+	if(*h==NULL) {
+		insertAtEnd(h,d);
+		return;
+	}
 	if(head->data == ele) {
 		//code to enter at the start of the list 
 		node*temp1 = NULL;
