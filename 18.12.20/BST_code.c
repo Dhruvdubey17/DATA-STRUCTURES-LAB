@@ -8,9 +8,6 @@ typedef struct binary_node{
 	struct binary_node *right;
 }node;
 
-/*node* newnode(int d) {
-	node*root = (node*)malloc(sizeof node)
-}*/
 
 void insert(node**root,int d) {
 	if(*root == NULL) {
